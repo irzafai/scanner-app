@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "865926350607",
+    "project_id": "qr-scanner-event-ticketing",
+    "storage_bucket": "qr-scanner-event-ticketing.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865926350607:android:e6eb495a73d96a6f69607a",
+        "android_client_info": {
+          "package_name": "com.example.scanner_event_learn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClQVRKtW_qnJ5KcjB3cUN5L72BhVLVxyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
