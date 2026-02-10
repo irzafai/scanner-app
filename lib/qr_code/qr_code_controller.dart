@@ -18,6 +18,7 @@ class QrCodeController {
     log('Barcode found: $barcode');
 
     isValid = await redeemQRCode(barcode);
+    log('Is valid: $isValid');
   }
 
   Future<bool> redeemQRCode(String qrData) async {

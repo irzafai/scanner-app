@@ -57,36 +57,38 @@ class _QrCodeViewState extends State<QrCodeView> {
   Widget _resultOverlay() {
     final valid = controller.isValid == true;
 
-    return Container(
-      color: Colors.black.withOpacity(0.7),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              valid ? Icons.check_circle : Icons.cancel,
-              color: valid ? Colors.green : Colors.red,
-              size: 100,
-            ),
-            const SizedBox(height: 16),
-            Text(
-              valid ? 'VALID TICKET' : 'INVALID TICKET',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+    return AlertDialog(
+      content: Container(
+        color: Colors.black.withOpacity(0.7),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                valid ? Icons.check_circle : Icons.cancel,
+                color: valid ? Colors.green : Colors.red,
+                size: 100,
               ),
-            ),
-            const SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: () {
-                controller.resetScanner();
-                scannerController.start();
-                setState(() {});
-              },
-              child: const Text('Scan lagi'),
-            ),
-          ],
+              const SizedBox(height: 16),
+              Text(
+                valid ? 'VALID TICKET' : 'INVALID TICKET',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () {
+                  controller.resetScanner();
+                  scannerController.start();
+                  setState(() {});
+                },
+                child: const Text('Scan lagi'),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -25,25 +25,13 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.lightBlueAccent,
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const [
-            Icon(
-              Icons.qr_code_scanner,
-              color: Colors.blue,
-              size: 80,
-            ),
+            Image(image: AssetImage('assets/img/logo.png')),
             SizedBox(height: 16),
-            Text(
-              'EventPass',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
           ],
         ),
       ),
